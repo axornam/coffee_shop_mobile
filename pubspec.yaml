@@ -34,11 +34,17 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  http: ^1.1.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
+  flutter_launcher_icons: "^0.13.1"
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/coffee_shot_logo_generic.png"
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
@@ -69,6 +75,10 @@ flutter:
     - assets/icons/whole_beans.png
     - assets/icons/tea_bags.png
 
+    - assets/icons/loading_coffee_1.png
+    - assets/icons/loading_coffee_2.png
+    - assets/icons/loading_coffee_3.png
+
     - assets/icons/treats.svg
     - assets/icons/warm_treats.svg
     - assets/icons/frozen_treats.svg
@@ -79,9 +89,6 @@ flutter:
     - assets/icons/iced_coffee.svg
     - assets/icons/iced_latte.svg
     - assets/icons/lemonade.svg
-    - assets/icons/loading_coffee_1.svg
-    - assets/icons/loading_coffee_2.svg
-    - assets/icons/loading_coffee_3.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
