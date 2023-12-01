@@ -147,7 +147,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 ),
                                 contentPadding: EdgeInsets.symmetric(
                                   horizontal: 10,
-                                  vertical: 18,
+                                  vertical: 15,
                                 ),
                               ),
                             ),
@@ -227,29 +227,32 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             ),
                           ),
                           SizedBox(height: 20),
-                          OutlinedButton(
-                            onPressed: () {},
-                            child: Text('REGISTER'),
-                            style: ButtonStyle(
-                              padding: MaterialStatePropertyAll(
-                                EdgeInsets.symmetric(
-                                  horizontal: 70,
-                                  vertical: 18,
+                          SizedBox(
+                            width: double.infinity,
+                            child: OutlinedButton(
+                              onPressed: () {},
+                              child: Text('REGISTER'),
+                              style: ButtonStyle(
+                                padding: MaterialStatePropertyAll(
+                                  EdgeInsets.symmetric(
+                                    horizontal: 70,
+                                    vertical: 18,
+                                  ),
                                 ),
-                              ),
-                              foregroundColor: MaterialStatePropertyAll(
-                                colorScheme.onPrimary,
-                              ),
-                              backgroundColor: MaterialStatePropertyAll(
-                                colorScheme.primary,
-                              ),
-                              elevation: MaterialStatePropertyAll(2.0),
-                              shape: MaterialStatePropertyAll<OutlinedBorder>(
-                                RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20),
-                                  side: BorderSide(
-                                    width: 0,
-                                    style: BorderStyle.none,
+                                foregroundColor: MaterialStatePropertyAll(
+                                  colorScheme.onPrimary,
+                                ),
+                                backgroundColor: MaterialStatePropertyAll(
+                                  colorScheme.primary,
+                                ),
+                                elevation: MaterialStatePropertyAll(2.0),
+                                shape: MaterialStatePropertyAll<OutlinedBorder>(
+                                  RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20),
+                                    side: BorderSide(
+                                      width: 0,
+                                      style: BorderStyle.none,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -279,41 +282,44 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             ],
                           ),
                           SizedBox(height: 15),
-                          OutlinedButton(
-                            onPressed: () {
-                              Navigator.of(context).pushReplacement(
-                                MaterialPageRoute(
-                                  builder: (_) => LoginScreen(),
+                          SizedBox(
+                            width: double.infinity,
+                            child: OutlinedButton(
+                              onPressed: () {
+                                Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                    builder: (_) => LoginScreen(),
+                                  ),
+                                );
+                              },
+                              child: Text('SIGN IN'),
+                              style: ButtonStyle(
+                                padding: MaterialStatePropertyAll(
+                                  EdgeInsets.symmetric(
+                                    horizontal: 70,
+                                    vertical: 18,
+                                  ),
                                 ),
-                              );
-                            },
-                            child: Text('SIGN IN'),
-                            style: ButtonStyle(
-                              padding: MaterialStatePropertyAll(
-                                EdgeInsets.symmetric(
-                                  horizontal: 70,
-                                  vertical: 18,
+                                foregroundColor: MaterialStatePropertyAll(
+                                  colorScheme.onPrimary,
                                 ),
-                              ),
-                              foregroundColor: MaterialStatePropertyAll(
-                                colorScheme.onPrimary,
-                              ),
-                              backgroundColor: MaterialStatePropertyAll(
-                                colorScheme.primary,
-                              ),
-                              elevation: MaterialStatePropertyAll(2.0),
-                              shape: MaterialStatePropertyAll<OutlinedBorder>(
-                                RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20),
-                                  side: BorderSide(
-                                    width: 0,
-                                    style: BorderStyle.none,
+                                backgroundColor: MaterialStatePropertyAll(
+                                  colorScheme.primary,
+                                ),
+                                elevation: MaterialStatePropertyAll(2.0),
+                                shape: MaterialStatePropertyAll<OutlinedBorder>(
+                                  RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20),
+                                    side: BorderSide(
+                                      width: 0,
+                                      style: BorderStyle.none,
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
                           ),
-                          SizedBox(height: 15),
+                          SizedBox(height: 18),
                         ],
                       ),
                     )

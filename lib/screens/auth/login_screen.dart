@@ -203,29 +203,32 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                           ),
                           SizedBox(height: 30),
-                          OutlinedButton(
-                            onPressed: () {},
-                            child: Text('LOGIN'),
-                            style: ButtonStyle(
-                              padding: MaterialStatePropertyAll(
-                                EdgeInsets.symmetric(
-                                  horizontal: 70,
-                                  vertical: 18,
+                          SizedBox(
+                            width: double.infinity,
+                            child: OutlinedButton(
+                              onPressed: () {},
+                              child: Text('LOGIN'),
+                              style: ButtonStyle(
+                                padding: MaterialStatePropertyAll(
+                                  EdgeInsets.symmetric(
+                                    horizontal: 70,
+                                    vertical: 18,
+                                  ),
                                 ),
-                              ),
-                              foregroundColor: MaterialStatePropertyAll(
-                                colorScheme.onPrimary,
-                              ),
-                              backgroundColor: MaterialStatePropertyAll(
-                                colorScheme.primary,
-                              ),
-                              elevation: MaterialStatePropertyAll(2.0),
-                              shape: MaterialStatePropertyAll<OutlinedBorder>(
-                                RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20),
-                                  side: BorderSide(
-                                    width: 0,
-                                    style: BorderStyle.none,
+                                foregroundColor: MaterialStatePropertyAll(
+                                  colorScheme.onPrimary,
+                                ),
+                                backgroundColor: MaterialStatePropertyAll(
+                                  colorScheme.primary,
+                                ),
+                                elevation: MaterialStatePropertyAll(2.0),
+                                shape: MaterialStatePropertyAll<OutlinedBorder>(
+                                  RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20),
+                                    side: BorderSide(
+                                      width: 0,
+                                      style: BorderStyle.none,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -275,35 +278,38 @@ class _LoginScreenState extends State<LoginScreen> {
                             ],
                           ),
                           SizedBox(height: 22),
-                          OutlinedButton(
-                            onPressed: () {
-                              Navigator.of(context).pushReplacement(
-                                MaterialPageRoute(
-                                  builder: (_) => RegisterScreen(),
+                          SizedBox(
+                            width: double.infinity,
+                            child: OutlinedButton(
+                              onPressed: () {
+                                Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                    builder: (_) => RegisterScreen(),
+                                  ),
+                                );
+                              },
+                              child: Text('CREATE NEW ACCOUNT'),
+                              style: ButtonStyle(
+                                padding: MaterialStatePropertyAll(
+                                  EdgeInsets.symmetric(
+                                    horizontal: 70,
+                                    vertical: 18,
+                                  ),
                                 ),
-                              );
-                            },
-                            child: Text('CREATE NEW ACCOUNT'),
-                            style: ButtonStyle(
-                              padding: MaterialStatePropertyAll(
-                                EdgeInsets.symmetric(
-                                  horizontal: 70,
-                                  vertical: 18,
+                                foregroundColor: MaterialStatePropertyAll(
+                                  colorScheme.onPrimary,
                                 ),
-                              ),
-                              foregroundColor: MaterialStatePropertyAll(
-                                colorScheme.onPrimary,
-                              ),
-                              backgroundColor: MaterialStatePropertyAll(
-                                colorScheme.primary,
-                              ),
-                              elevation: MaterialStatePropertyAll(2.0),
-                              shape: MaterialStatePropertyAll<OutlinedBorder>(
-                                RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20),
-                                  side: BorderSide(
-                                    width: 0,
-                                    style: BorderStyle.none,
+                                backgroundColor: MaterialStatePropertyAll(
+                                  colorScheme.primary,
+                                ),
+                                elevation: MaterialStatePropertyAll(2.0),
+                                shape: MaterialStatePropertyAll<OutlinedBorder>(
+                                  RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20),
+                                    side: BorderSide(
+                                      width: 0,
+                                      style: BorderStyle.none,
+                                    ),
                                   ),
                                 ),
                               ),

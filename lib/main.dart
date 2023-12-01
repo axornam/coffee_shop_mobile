@@ -17,7 +17,6 @@ class MyApp extends StatelessWidget {
       home: const SplashScreen(),
     );
   }
-
   //style: Theme.of(context).textTheme.headlineMedium,
   //backgroundColor: Theme.of(context).colorScheme.inversePrimary,
 }
