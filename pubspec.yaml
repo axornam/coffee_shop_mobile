@@ -77,6 +77,8 @@ flutter:
     - assets/icons/sweets.png
     - assets/icons/whole_beans.png
     - assets/icons/tea_bags.png
+    - assets/icons/face_id.png
+    - assets/icons/face_id_done.png
 
     - assets/icons/loading_coffee_1.png
     - assets/icons/loading_coffee_2.png

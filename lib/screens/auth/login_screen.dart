@@ -87,7 +87,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       padding: EdgeInsets.only(left: 35, right: 5, top: 15),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
                             'Sign In',
@@ -106,11 +106,11 @@ class _LoginScreenState extends State<LoginScreen> {
                               );
                             },
                             iconSize: 30,
-                            icon: Icon(Icons.face_unlock_sharp),
+                            icon: ImageIcon(
+                              AssetImage('assets/icons/face_id.png'),
+                              color: colorScheme.primary,
+                            ),
                           ),
-                          //Image(
-                          //image: AssetImage('assets/icons/faceid.png'),
-                          //)
                         ],
                       ),
                     ),

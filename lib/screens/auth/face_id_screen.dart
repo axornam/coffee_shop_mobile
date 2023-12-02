@@ -1,5 +1,5 @@
 import 'package:coffee_shop/config/constants.dart';
-import 'package:coffee_shop/screens/auth/register_screen.dart';
+import 'package:coffee_shop/screens/auth/loading_screen.dart';
 import 'package:flutter/material.dart';
 
 class FaceIDScreen extends StatefulWidget {
@@ -16,8 +16,7 @@ class _FaceIDScreenState extends State<FaceIDScreen> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            alignment: Alignment(0, -0.5),
-            scale: 0.65,
+            alignment: Alignment(0, -0.55),
             image: AssetImage('assets/icons/coffeeshot_logo.png'),
           ),
         ),
@@ -51,9 +50,13 @@ class _FaceIDScreenState extends State<FaceIDScreen> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Icon(Icons.face_2_outlined,
-                              size: 45, color: colorScheme.primary),
-                          SizedBox(height: 40),
+                          SizedBox(height: 10),
+                          ImageIcon(
+                            AssetImage('assets/icons/face_id.png'),
+                            size: 55,
+                            color: colorScheme.primary,
+                          ),
+                          SizedBox(height: 35),
                           Text(
                             'Want to Enable faceID?',
                             style: TextStyle(
@@ -82,7 +85,13 @@ class _FaceIDScreenState extends State<FaceIDScreen> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           OutlinedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context).pushReplacement(
+                                MaterialPageRoute(
+                                  builder: (_) => const LoadingScreen(),
+                                ),
+                              );
+                            },
                             child: Text('YES'),
                             style: ButtonStyle(
                               padding: MaterialStatePropertyAll(
@@ -110,7 +119,9 @@ class _FaceIDScreenState extends State<FaceIDScreen> {
                             ),
                           ),
                           OutlinedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
                             child: Text('NO'),
                             style: ButtonStyle(
                               padding: MaterialStatePropertyAll(

@@ -21,13 +21,19 @@ class _SplashScreenState extends State<SplashScreen> {
     return Material(
       child: Container(
         decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/splash_bg.png'),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Container(
+          decoration: BoxDecoration(
             image: DecorationImage(
-          image: AssetImage('assets/images/splash_bg.png'),
-          fit: BoxFit.cover,
-        )),
-        child: const Image(
-          image: AssetImage('assets/icons/coffeeshot_logo.png'),
-          //opacity: AlwaysStoppedAnimation(0.2),
+              image: AssetImage('assets/icons/coffeeshot_logo.png'),
+              scale: 1.5,
+              //opacity: AlwaysStoppedAnimation(0.2),
+            ),
+          ),
         ),
       ),
     );
