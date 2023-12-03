@@ -9,7 +9,7 @@ const int CREAMY_LATTE = 0xffd5bba2;
 const int ROASTED_CARAMEL = 0xffa67c52;
 const int FRESH_MINT = 0xff4ebd7c;
 const int BLACK = 0xff272727;
-const int FROTHY_WHITE = 0xfff6fe2d;
+const int FROTHY_WHITE = 0xfff6f2ed;
 // light themes
 const int DARK_ROAST = 0xff332920;
 const int BLACK_COFFEE = 0xff1e1410;
@@ -26,6 +26,7 @@ const Color backgroundCoffeeColor = Color(BACKGROUND_COFFEE_COLOR);
 final ColorScheme colorScheme = ColorScheme.fromSeed(
   background: backgroundCoffeeColor,
   primary: primaryCoffeeColor,
+  //onPrimary: Color(FROTHY_WHITE),
   seedColor: primaryCoffeeColor,
 );
 
