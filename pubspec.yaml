@@ -38,6 +38,8 @@ dependencies:
   google_fonts: ^6.1.0
   fluentui_system_icons: ^1.1.222
   flutter_svg: ^2.0.9
+  #permission_handler: ^10.2.0
+  #shared_preferences: ^2.1.1
 
 dev_dependencies:
   flutter_test:
@@ -83,6 +85,9 @@ flutter:
     - assets/icons/loading_coffee_1.png
     - assets/icons/loading_coffee_2.png
     - assets/icons/loading_coffee_3.png
+
+    - assets/icons/cool_avatar_f.png
+    - assets/icons/cool_avatar_m.png
 
     - assets/icons/treats.svg
     - assets/icons/warm_treats.svg
