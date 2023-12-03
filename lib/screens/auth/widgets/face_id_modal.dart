@@ -87,7 +87,9 @@ class _FaceIDModalState extends State<FaceIDModal> {
       Navigator.of(context).pop(); // remove loading screen
       Navigator.of(context).pop(); // remove auth screen
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (_) => HomePage()),
+        MaterialPageRoute(
+          builder: (_) => HomePage(isLoggedIn: true),
+        ),
       );
     }
   }

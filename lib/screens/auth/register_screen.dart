@@ -1,5 +1,6 @@
 import 'package:coffee_shop/config/constants.dart';
 import 'package:coffee_shop/screens/auth/login_screen.dart';
+import 'package:coffee_shop/screens/home/home_screen.dart';
 import 'package:coffee_shop/widgets/button.dart';
 import 'package:coffee_shop/widgets/input_field.dart';
 import 'package:flutter/material.dart';
@@ -48,7 +49,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
             alignment: Alignment.topRight,
             heightFactor: 2.5,
             child: TextButton(
-              onPressed: () => (),
+              onPressed: () {
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(
+                    builder: (_) => HomePage(isLoggedIn: false),
+                  ),
+                );
+              },
               child: Text(
                 'Skip',
                 style: TextStyle(
