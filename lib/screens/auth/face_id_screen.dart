@@ -1,5 +1,6 @@
 import 'package:coffee_shop/config/constants.dart';
 import 'package:coffee_shop/screens/auth/loading_screen.dart';
+import 'package:coffee_shop/widgets/button.dart';
 import 'package:flutter/material.dart';
 
 class FaceIDScreen extends StatefulWidget {
@@ -82,70 +83,28 @@ class _FaceIDScreenState extends State<FaceIDScreen> {
                     Container(
                       padding: EdgeInsets.only(left: 10, right: 10, top: 30),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          OutlinedButton(
-                            onPressed: () {
-                              Navigator.of(context).pushReplacement(
-                                MaterialPageRoute(
-                                  builder: (_) => const LoadingScreen(),
-                                ),
-                              );
-                            },
-                            child: Text('YES'),
-                            style: ButtonStyle(
-                              padding: MaterialStatePropertyAll(
-                                EdgeInsets.symmetric(
-                                  horizontal: 60,
-                                  vertical: 18,
-                                ),
-                              ),
-                              foregroundColor: MaterialStatePropertyAll(
-                                colorScheme.onPrimary,
-                              ),
-                              backgroundColor: MaterialStatePropertyAll(
-                                colorScheme.primary,
-                              ),
-                              elevation: MaterialStatePropertyAll(2.0),
-                              shape: MaterialStatePropertyAll<OutlinedBorder>(
-                                RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20),
-                                  side: BorderSide(
-                                    width: 0,
-                                    style: BorderStyle.none,
+                          Flexible(
+                            flex: 1,
+                            child: CustomButton(
+                              title: 'YES',
+                              margin: EdgeInsets.symmetric(horizontal: 20),
+                              onPressed: () {
+                                Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                    builder: (_) => const LoadingScreen(),
                                   ),
-                                ),
-                              ),
+                                );
+                              },
                             ),
                           ),
-                          OutlinedButton(
-                            onPressed: () {
-                              Navigator.of(context).pop();
-                            },
-                            child: Text('NO'),
-                            style: ButtonStyle(
-                              padding: MaterialStatePropertyAll(
-                                EdgeInsets.symmetric(
-                                  horizontal: 60,
-                                  vertical: 18,
-                                ),
-                              ),
-                              foregroundColor: MaterialStatePropertyAll(
-                                colorScheme.onPrimary,
-                              ),
-                              backgroundColor: MaterialStatePropertyAll(
-                                colorScheme.primary,
-                              ),
-                              elevation: MaterialStatePropertyAll(2.0),
-                              shape: MaterialStatePropertyAll<OutlinedBorder>(
-                                RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20),
-                                  side: BorderSide(
-                                    width: 0,
-                                    style: BorderStyle.none,
-                                  ),
-                                ),
-                              ),
+                          Flexible(
+                            flex: 1,
+                            child: CustomButton(
+                              title: "NO",
+                              margin: EdgeInsets.symmetric(horizontal: 20),
+                              onPressed: () => Navigator.of(context).pop(),
                             ),
                           ),
                         ],

@@ -69,36 +69,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/splash_bg.png
-      # icons
-    - assets/icons/coffeeshot_logo.png
-    - assets/icons/customizecoffee.png
-    - assets/icons/coffeerewards.png
-    - assets/icons/coffeetime.png
-    - assets/icons/lollipop.png
-    - assets/icons/sweets.png
-    - assets/icons/whole_beans.png
-    - assets/icons/tea_bags.png
-    - assets/icons/face_id.png
-    - assets/icons/face_id_done.png
-
-    - assets/icons/loading_coffee_1.png
-    - assets/icons/loading_coffee_2.png
-    - assets/icons/loading_coffee_3.png
-
-    - assets/icons/cool_avatar_f.png
-    - assets/icons/cool_avatar_m.png
-
-    - assets/icons/treats.svg
-    - assets/icons/warm_treats.svg
-    - assets/icons/frozen_treats.svg
-    - assets/icons/hot_breakfast.svg
-    - assets/icons/hot_coffee.svg
-    - assets/icons/hot_latte.svg
-    - assets/icons/hot_tea.svg
-    - assets/icons/iced_coffee.svg
-    - assets/icons/iced_latte.svg
-    - assets/icons/lemonade.svg
+    - assets/images/
+    - assets/icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

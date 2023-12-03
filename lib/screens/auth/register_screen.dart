@@ -1,5 +1,7 @@
 import 'package:coffee_shop/config/constants.dart';
 import 'package:coffee_shop/screens/auth/login_screen.dart';
+import 'package:coffee_shop/widgets/button.dart';
+import 'package:coffee_shop/widgets/input_field.dart';
 import 'package:flutter/material.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -117,146 +119,27 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Row(
-                            children: [
-                              Text(
-                                'Username',
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w400,
-                                  color: colorScheme.tertiary,
-                                ),
-                              ),
-                            ],
-                          ),
-                          Card(
-                            color: colorScheme.onPrimary,
-                            child: TextFormField(
-                              controller: _userNameTextController,
-                              onTapOutside: (_) {},
-                              decoration: InputDecoration(
-                                labelText: 'Enter username',
-                                floatingLabelBehavior:
-                                    FloatingLabelBehavior.never,
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(20),
-                                  borderSide: BorderSide(
-                                    width: 0,
-                                    style: BorderStyle.none,
-                                  ),
-                                ),
-                                contentPadding: EdgeInsets.symmetric(
-                                  horizontal: 10,
-                                  vertical: 15,
-                                ),
-                              ),
-                            ),
+                          InputField(
+                            title: "Username",
+                            placeholder: "Enter username",
+                            controller: _userNameTextController,
                           ),
                           SizedBox(height: 15),
-                          Row(
-                            children: [
-                              Text(
-                                'Email or Phone Number',
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w400,
-                                  color: colorScheme.tertiary,
-                                ),
-                              ),
-                            ],
-                          ),
-                          Card(
-                            color: colorScheme.onPrimary,
-                            child: TextFormField(
-                              controller: _emailOrPhoneTextController,
-                              onTapOutside: (_) {},
-                              decoration: InputDecoration(
-                                labelText: 'Type your email or phone number',
-                                floatingLabelBehavior:
-                                    FloatingLabelBehavior.never,
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(20),
-                                  borderSide: BorderSide(
-                                    width: 0,
-                                    style: BorderStyle.none,
-                                  ),
-                                ),
-                                contentPadding: EdgeInsets.symmetric(
-                                  horizontal: 10,
-                                  vertical: 15,
-                                ),
-                              ),
-                            ),
+                          InputField(
+                            title: "Email of Phone Number",
+                            placeholder: 'Type your email or phone number',
+                            controller: _emailOrPhoneTextController,
                           ),
                           SizedBox(height: 15),
-                          Row(
-                            children: [
-                              Text(
-                                'Password',
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w400,
-                                  color: colorScheme.tertiary,
-                                ),
-                              ),
-                            ],
-                          ),
-                          Card(
-                            color: colorScheme.onPrimary,
-                            child: TextFormField(
-                              controller: _userNameTextController,
-                              onTapOutside: (_) {},
-                              obscureText: true,
-                              decoration: InputDecoration(
-                                suffixIcon: Icon(Icons.remove_red_eye),
-                                labelText: 'Type your password',
-                                floatingLabelBehavior:
-                                    FloatingLabelBehavior.never,
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(20),
-                                  borderSide: BorderSide(
-                                    width: 0,
-                                    style: BorderStyle.none,
-                                  ),
-                                ),
-                                contentPadding: EdgeInsets.symmetric(
-                                  horizontal: 10,
-                                  vertical: 15,
-                                ),
-                              ),
-                            ),
+                          PasswordInputField(
+                            title: "Password",
+                            placeholder: 'Type your password',
+                            controller: _passwordTextController,
                           ),
                           SizedBox(height: 20),
-                          SizedBox(
-                            width: double.infinity,
-                            child: OutlinedButton(
-                              onPressed: () {},
-                              child: Text('REGISTER'),
-                              style: ButtonStyle(
-                                padding: MaterialStatePropertyAll(
-                                  EdgeInsets.symmetric(
-                                    horizontal: 70,
-                                    vertical: 18,
-                                  ),
-                                ),
-                                foregroundColor: MaterialStatePropertyAll(
-                                  colorScheme.onPrimary,
-                                ),
-                                backgroundColor: MaterialStatePropertyAll(
-                                  colorScheme.primary,
-                                ),
-                                elevation: MaterialStatePropertyAll(2.0),
-                                shape: MaterialStatePropertyAll<OutlinedBorder>(
-                                  RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(20),
-                                    side: BorderSide(
-                                      width: 0,
-                                      style: BorderStyle.none,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
+                          CustomButton(
+                            title: "REGISTER",
+                            onPressed: () {},
                           ),
                           SizedBox(height: 20),
                           Column(
@@ -282,42 +165,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             ],
                           ),
                           SizedBox(height: 15),
-                          SizedBox(
-                            width: double.infinity,
-                            child: OutlinedButton(
-                              onPressed: () {
-                                Navigator.of(context).pushReplacement(
-                                  MaterialPageRoute(
-                                    builder: (_) => LoginScreen(),
-                                  ),
-                                );
-                              },
-                              child: Text('SIGN IN'),
-                              style: ButtonStyle(
-                                padding: MaterialStatePropertyAll(
-                                  EdgeInsets.symmetric(
-                                    horizontal: 70,
-                                    vertical: 18,
-                                  ),
+                          CustomButton(
+                            title: "SIGN IN",
+                            onPressed: () {
+                              Navigator.of(context).pushReplacement(
+                                MaterialPageRoute(
+                                  builder: (_) => LoginScreen(),
                                 ),
-                                foregroundColor: MaterialStatePropertyAll(
-                                  colorScheme.onPrimary,
-                                ),
-                                backgroundColor: MaterialStatePropertyAll(
-                                  colorScheme.primary,
-                                ),
-                                elevation: MaterialStatePropertyAll(2.0),
-                                shape: MaterialStatePropertyAll<OutlinedBorder>(
-                                  RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(20),
-                                    side: BorderSide(
-                                      width: 0,
-                                      style: BorderStyle.none,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
+                              );
+                            },
                           ),
                           SizedBox(height: 18),
                         ],

@@ -1,4 +1,5 @@
 import 'package:coffee_shop/config/constants.dart';
+import 'package:coffee_shop/widgets/button.dart';
 import 'package:flutter/material.dart';
 
 class GuestHeroCard extends StatelessWidget {
@@ -29,78 +30,34 @@ class GuestHeroCard extends StatelessWidget {
               children: [
                 Text(
                   "Join the Rewards program to enjoy free beverages, special offers and more!",
+                  textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                         color: Theme.of(context).colorScheme.onPrimary,
                         fontWeight: FontWeight.normal,
                       ),
                 ),
-                Flexible(
-                  flex: 1,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      SizedBox(
-                        child: TextButton(
-                          onPressed: () {},
-                          child: Text('JOIN NOW'),
-                          style: ButtonStyle(
-                            padding: MaterialStatePropertyAll(
-                              EdgeInsets.symmetric(
-                                horizontal: 36,
-                                vertical: 18,
-                              ),
-                            ),
-                            foregroundColor: MaterialStatePropertyAll(
-                              colorScheme.onPrimary,
-                            ),
-                            backgroundColor: MaterialStatePropertyAll(
-                              colorScheme.primary,
-                            ),
-                            elevation: MaterialStatePropertyAll(2.0),
-                            shape: MaterialStatePropertyAll<OutlinedBorder>(
-                              RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20),
-                                side: BorderSide(
-                                  width: 0,
-                                  style: BorderStyle.none,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Flexible(
+                      flex: 1,
+                      child: CustomButton(
+                        title: "JOIN NOW",
+                        margin: EdgeInsets.symmetric(horizontal: 10),
+                        onPressed: () {},
                       ),
-                      SizedBox(
-                        child: TextButton(
-                          onPressed: () {},
-                          child: Text('GUEST ORDER'),
-                          style: ButtonStyle(
-                            padding: MaterialStatePropertyAll(
-                              EdgeInsets.symmetric(
-                                horizontal: 36,
-                                vertical: 18,
-                              ),
-                            ),
-                            foregroundColor: MaterialStatePropertyAll(
-                              colorScheme.primary,
-                            ),
-                            backgroundColor: MaterialStatePropertyAll(
-                              Color(CREAMY_LATTE),
-                            ),
-                            elevation: MaterialStatePropertyAll(2.0),
-                            shape: MaterialStatePropertyAll<OutlinedBorder>(
-                              RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20),
-                                side: BorderSide(
-                                  width: 0,
-                                  style: BorderStyle.none,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
+                    ),
+                    Flexible(
+                      flex: 1,
+                      child: CustomButton(
+                        title: "GUEST ORDER",
+                        margin: EdgeInsets.symmetric(horizontal: 10),
+                        backgroundColor: Color(CREAMY_LATTE),
+                        foregroundColor: colorScheme.primary,
+                        onPressed: () {},
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ],
             ),
