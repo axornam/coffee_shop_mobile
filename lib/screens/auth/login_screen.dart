@@ -1,7 +1,7 @@
 import 'package:coffee_shop/config/constants.dart';
 import 'package:coffee_shop/screens/auth/face_id_screen.dart';
 import 'package:coffee_shop/screens/auth/register_screen.dart';
-import 'package:coffee_shop/screens/home/home_screen.dart';
+import 'package:coffee_shop/screens/home_page.dart';
 import 'package:coffee_shop/widgets/button.dart';
 import 'package:coffee_shop/widgets/input_field.dart';
 import 'package:flutter/material.dart';
