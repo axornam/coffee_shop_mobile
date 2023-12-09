@@ -18,6 +18,7 @@ class FavouriteDrinkItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.only(top: 10, bottom: 15),
       decoration: BoxDecoration(
         //color: Color(FROTHY_WHITE),
         color: Color(0xffffffff),
@@ -29,13 +30,13 @@ class FavouriteDrinkItem extends StatelessWidget {
         onTap: onPressed ?? _onPressed,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 12.5),
+                  padding: EdgeInsets.symmetric(horizontal: 10),
                   child: GestureDetector(
                     onTap: () {},
                     child: Icon(
@@ -47,13 +48,15 @@ class FavouriteDrinkItem extends StatelessWidget {
                 ),
               ],
             ),
-            FadeInImage.assetNetwork(
-              placeholder: "Loading...",
-              image: (imgUrl),
-              imageErrorBuilder: (_, __, ___) => SvgPicture.asset(
-                "assets/icons/iced_latte.svg",
-                width: 70,
-                height: 70,
+            Expanded(
+              child: FadeInImage.assetNetwork(
+                placeholder: "Loading...",
+                image: (imgUrl),
+                imageErrorBuilder: (_, __, ___) => SvgPicture.asset(
+                  "assets/icons/iced_latte.svg",
+                  width: 70,
+                  height: 70,
+                ),
               ),
             ),
             Text(
